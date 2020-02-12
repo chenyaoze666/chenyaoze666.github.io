@@ -1,3 +1,13 @@
+ ---                                                                         
+  layout: VIM
+  title:  "VIM 操作"
+  date:   2020-02-12 12:23:42 +0530
+  categories: Linux Vim
+ ---
+
+
+
+
 # vim操作
 ## 创建文件或修改文件
 * vim 文件名
