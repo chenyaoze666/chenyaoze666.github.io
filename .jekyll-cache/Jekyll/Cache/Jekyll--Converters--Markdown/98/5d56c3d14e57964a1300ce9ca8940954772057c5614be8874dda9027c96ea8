@@ -1,0 +1,114 @@
+I"�<p>—                                                                          layout: VIM
+  title:  “VIM 操作”
+  date:   2020-02-12 12:23:42 +0530
+  categories: Linux Vim
+ —</p>
+
+<h1 id="vim操作">vim操作</h1>
+<h2 id="创建文件或修改文件">创建文件或修改文件</h2>
+<ul>
+  <li>vim 文件名
+　* 文件存在     即修改
+    <ul>
+      <li>不存在       即创建
+        <h2 id="进入插入模式">进入插入模式</h2>
+      </li>
+    </ul>
+  </li>
+  <li>a                 在光标所在字符后插入</li>
+  <li>A                 在光标所在行尾插入</li>
+  <li>i                 在光标所在字符前插入</li>
+  <li>I                 在光标所在行行首插入</li>
+  <li>o                 在光标下插入新行</li>
+  <li>O                 在光标上插入新行</li>
+  <li>Ese               退出插入模式
+    <h2 id="命令模式下">命令模式下</h2>
+  </li>
+  <li>:w                保存</li>
+  <li>:wq               保存退出</li>
+  <li>:q                退出</li>
+  <li><code class="highlighter-rouge">!</code>强制
+    <ul>
+      <li><code class="highlighter-rouge">:q!</code>           强制不保存退出    任何用户都可以使用</li>
+      <li><code class="highlighter-rouge">:wq!</code>          只有root可用,  用于没有写权限时, 强制写入</li>
+    </ul>
+  </li>
+  <li>:w 文件名         另存为</li>
+</ul>
+
+<h2 id="快捷操作">快捷操作</h2>
+<ul>
+  <li>移动光标
+    <ul>
+      <li>上下左右
+        <ul>
+          <li>hjkl          (左下上右)</li>
+        </ul>
+      </li>
+      <li>移动光标到头和尾
+        <ul>
+          <li>gg            把光标移到到文件头</li>
+        </ul>
+      </li>
+      <li>shift+g 或 G      移动到文件尾</li>
+      <li>^               移动到行首</li>
+      <li>$               移动到行尾</li>
+      <li>:n              移动到第n行</li>
+      <li>删除字母
+        <ul>
+          <li>x             删除单个字母</li>
+          <li>nx            删除n个字母 光标开始向后</li>
+        </ul>
+      </li>
+      <li>删除整行 剪切
+        <ul>
+          <li>dd            删除单行</li>
+          <li>:n1,n2d       删除指定范围的行</li>
+          <li>ndd           删除多行</li>
+          <li>p             粘贴 光标尾部</li>
+          <li>P (大)        粘贴到光标前</li>
+          <li>dG            从光标所在行删到文件尾</li>
+        </ul>
+      </li>
+      <li>复制
+        <ul>
+          <li>yy</li>
+          <li>nyy</li>
+        </ul>
+      </li>
+      <li>撤销
+        <ul>
+          <li>u             销撤</li>
+          <li>ctrl + r      反撤销</li>
+        </ul>
+      </li>
+      <li>替换
+        <ul>
+          <li>r             替换光标所在处的字符</li>
+          <li>R             从光标所在处开始替换字符, 按ESC结束</li>
+        </ul>
+      </li>
+      <li>显示行号
+        <ul>
+          <li>:set nu       临时生效</li>
+          <li>:set  nonu    取消行号</li>
+        </ul>
+      </li>
+      <li>查找
+        <ul>
+          <li>/查找内容     向下查找</li>
+          <li>n             下一个</li>
+          <li>N             上一个</li>
+        </ul>
+      </li>
+      <li>查找替换
+        <ul>
+          <li>:1, 10s/old/new/g      替换1到10行的所有old为new</li>
+          <li>:%s/old/new/g          替换整个文件的old为new</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+:ET
