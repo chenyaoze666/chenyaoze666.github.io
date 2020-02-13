@@ -1,0 +1,23 @@
+---
+layout: post
+title:  "git分支"
+date:   2020-02-13 08:03:00 +0530
+categories: 码云 git
+---
+基本分支提交 合并
+
+## 分支合并提交操作
+
+* 创建进入分支git checkout -b xxx
+* push分支git push origin cyz
+* 主分支上有提交任务git push
+* 更新git pull
+* 切换到分支git checkout  xxx
+* 分支添加 git add .
+* 分支提交git commit -m ""
+* 分支    git push origin xxx
+* 切换主分支  git checkout master
+* 更新  git pull
+* 查看所有分支 git branch --all
+* 主分支上合并 git merge remotes/origin/xxx
+* 提交主分支 git push
