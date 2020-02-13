@@ -6,9 +6,12 @@
 ---
     简单打印实心和空心 正方形、三角形、菱形、梯形、回字
 
+## 打印实心和空心 正方形、三角形、菱形、梯形、回字
 
+## 封装函数
 
-    function printTX(draw,content,row,col,hollow){
+```
+ function printTX(draw,content,row,col,hollow){
       switch(draw)
       {
         case "zfx" :
@@ -28,7 +31,12 @@
         break;
       }
     }
-    function ZFX(content,row,col,hollow){
+```
+
+## 正方形
+
+```
+function ZFX(content,row,col,hollow){
       var tmp = "";
       if(row!=col || row<3){
         console.log("行数不正确或小于3");
@@ -71,8 +79,12 @@
       }      
     }
     console.log('------------- 分隔符 --------------');
+```
 
-    function SJX(content,row,col,hollow){
+## 三角形
+
+```
+function SJX(content,row,col,hollow){
         if(row!=col || row<4){
           console.log("输入行数错误或行数<4或行列不等");
           return;
@@ -113,8 +125,12 @@
         }
         
     }
+```
 
-      function LX(content,row,col,hollow){
+## 菱形
+
+```
+function LX(content,row,col,hollow){
         var temp ="";
         var tmp;
         var rowtmp=(row-1)/2
@@ -157,8 +173,12 @@
           }
         }
       }
+```
 
-  function HUI(content,row,col,hollow){
+## 回字
+
+```
+function HUI(content,row,col,hollow){
         console.log("打印回");
         var tmp ="";
          for(var i =0; i<row; i++)
@@ -214,8 +234,12 @@
             console.log(tmp);
          }
     }
+```
 
-      function TX(content,row,col,hollow){
+## 梯形
+
+```
+ function TX(content,row,col,hollow){
         if(row<3){
           console.log("请输入行数小于3");
           return ;
@@ -256,8 +280,12 @@
         }
       }
 
+```
 
-    printTX("zfx","#",4,4,false);
+## 打印
+
+```
+printTX("zfx","#",4,4,false);
     console.log('------------- 分隔符 --------------');
     printTX("zfx","#",4,4,true);
     console.log('------------- 分隔符 --------------');
@@ -279,3 +307,7 @@
     console.log('------------- 分隔符 --------------');
     printTX("tx","#",3,3,true);
     console.log('------------- 分隔符 --------------');
+```
+
+
+
