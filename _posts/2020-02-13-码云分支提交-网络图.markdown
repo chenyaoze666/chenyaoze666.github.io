@@ -21,3 +21,7 @@ categories: 码云 git
 * 查看所有分支 git branch --all
 * 主分支上合并 git merge remotes/origin/xxx
 * 提交主分支 git push
+* 回退版本 git reset --hard 81aa32e04159253919c0f34180b657b41f55ecc7
+* 刷新仓库 git push origin HEAD --force
+
+
