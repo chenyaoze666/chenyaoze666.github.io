@@ -1,0 +1,434 @@
+I"&!<p>C语言 输入 输出 垃圾处理 循环控制</p>
+
+<p># C语言基础</p>
+
+<h2 id="输入输出">输入输出</h2>
+
+<h3 id="输出">输出</h3>
+
+<ul>
+  <li>数据输出
+    <ul>
+      <li>C语言无I/O 语句, I/O操作有函数实现
+        <ul>
+          <li>#include <stdio.h></stdio.h></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>字符输出函数
+    <ul>
+      <li>格式        putchar(c)</li>
+      <li>参数        c为字符常量、变量或表达式</li>
+      <li>功能        把字符c输出到显示屏</li>
+      <li>返值：   正常， 为显示的代码值</li>
+    </ul>
+  </li>
+  <li>格式输出函数
+    <ul>
+      <li>printf();</li>
+    </ul>
+  </li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>格式符</th>
+      <th>作用</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>i,d</td>
+      <td>十进制整数</td>
+    </tr>
+    <tr>
+      <td>x,X</td>
+      <td>十六进制无符号整数</td>
+    </tr>
+    <tr>
+      <td>o</td>
+      <td>八进制无符号整数</td>
+    </tr>
+    <tr>
+      <td>u</td>
+      <td>无符号十进制整数</td>
+    </tr>
+    <tr>
+      <td>c</td>
+      <td>单一字符</td>
+    </tr>
+    <tr>
+      <td>s</td>
+      <td>字符串</td>
+    </tr>
+    <tr>
+      <td>e,E</td>
+      <td>指数形式浮点小数</td>
+    </tr>
+    <tr>
+      <td>f</td>
+      <td>小数形式浮点小数</td>
+    </tr>
+    <tr>
+      <td>g</td>
+      <td>e和f中较短一种</td>
+    </tr>
+    <tr>
+      <td>%%</td>
+      <td>百分号本身</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>特殊修饰</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>修饰符</th>
+      <th>功能</th>
+      <th>代表值</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>m</td>
+      <td>数据长度&lt;m,左边补空格 , 否则原样输出</td>
+      <td>8d%</td>
+    </tr>
+    <tr>
+      <td>.n</td>
+      <td>对实数, 小数点后位数    并四舍五入</td>
+      <td>5.1f%</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>对字符串,指定实际输出位数</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>-</td>
+      <td>输出的数据左对齐,默认右对齐</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>+</td>
+      <td>指定在有符号数的正数前显示正数</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>输出数值时指定左面不使用的空位置自动填0</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>#</td>
+      <td>在八进制和十六进制数前加0, 0x</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>l</td>
+      <td>在d,o,x,u前 指定输出精度为long型</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>在ef,g前 指定输出精度为double型</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="输入">输入</h3>
+
+<ul>
+  <li>字符输入函数
+    <ul>
+      <li>getchar()</li>
+      <li>从键盘读一字符</li>
+      <li>返回值: 正常  返回读取的代码值   出错   返回-1  (按ctrl +d)</li>
+    </ul>
+  </li>
+  <li>
+    <p>格式输入函数</p>
+
+    <ul>
+      <li>scanf()</li>
+      <li>取地址符号<code class="highlighter-rouge">&amp;</code></li>
+      <li>将输入赋值给n  来判断是否输入成功
+        <ul>
+          <li>int a,n;</li>
+          <li>n = scanf(“%d”,&amp;a);</li>
+          <li>n为接收的变量个数, 若n为0则表示不成功</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>格式符</th>
+      <th>作用</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>i,d</td>
+      <td>十进制整数</td>
+    </tr>
+    <tr>
+      <td>x,X</td>
+      <td>十六进制无符号整数</td>
+    </tr>
+    <tr>
+      <td>o</td>
+      <td>八进制无符号整数</td>
+    </tr>
+    <tr>
+      <td>u</td>
+      <td>无符号十进制整数</td>
+    </tr>
+    <tr>
+      <td>c</td>
+      <td>单一字符</td>
+    </tr>
+    <tr>
+      <td>s</td>
+      <td>字符串</td>
+    </tr>
+    <tr>
+      <td>e,E</td>
+      <td>指数形式浮点小数</td>
+    </tr>
+    <tr>
+      <td>f</td>
+      <td>小数形式浮点小数</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>特殊修饰</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>修饰符</th>
+      <th>功能</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>h</td>
+      <td>用于d o x前, 指定输入为short型整数</td>
+    </tr>
+    <tr>
+      <td>l</td>
+      <td>用于d o x 前 指定输入为long型整数</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>用于 e,f前  指定输入为double型实数</td>
+    </tr>
+    <tr>
+      <td>m</td>
+      <td>指定输入数据宽度, 遇空格或不可转换字符结束</td>
+    </tr>
+    <tr>
+      <td>*</td>
+      <td>抑制符, 指定输入项读入后不赋予给变量</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>输入数据时数据结束
+    <ul>
+      <li>遇空格 TAB 或回车</li>
+      <li>遇非法输入</li>
+      <li>遇宽度结束
+*</li>
+      <li>char型中 有ASCII的不能作为结束</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="垃圾处理">垃圾处理</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int a;
+char x;
+
+printf("&gt;");
+scanf("%d",&amp;a);//5回车
+scanf("%c",&amp;x);
+
+printf("%D:%c:%d\n",a,x,x);//5:
+						   //:10
+                                      //回车被接收
+printf("%d\n",'\n');		//10
+
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p>回收 回车  垃圾</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int a;
+char x;
+
+printf("&gt;");
+scanf("%d",&amp;a);//5回车
+
+getchar();//回收键盘输入垃圾
+
+scanf("%c",&amp;x);//a
+
+printf("%D:%c:%d\n",a,x,x);//5:a:97
+
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>方法2  使用格式串中的 <code class="highlighter-rouge">空格</code>或<code class="highlighter-rouge">%*c</code></p>
+  </li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int a;
+char x;
+
+printf("&gt;");
+scanf("%d",&amp;a);//5回车
+
+scanf(" %c",&amp;x);//或scanf(" %*c%c",&amp;x);//a
+
+printf("%D:%c:%d\n",a,x,x);//5:a:97
+</code></pre></div></div>
+
+<ul>
+  <li>字符串输入函数gets
+    <ul>
+      <li>char *  gets(char *s)</li>
+      <li>从键盘输入一以回车结束的字符串放入字符数组中,并自动加上’\0’</li>
+      <li>输入长度应小于数组维数       可输入长度为数组维数-‘‘0’</li>
+      <li>输入时  空格不能作为结束的标志</li>
+    </ul>
+  </li>
+  <li>字符创输出函数puts
+    <ul>
+      <li>int puts(const char *s)</li>
+      <li>像显示器输字符串(输出完, 换行)</li>
+      <li>字符串必须以’\n’结尾</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="控制语句">控制语句</h2>
+
+<ul>
+  <li>
+    <p>分支</p>
+
+    <ul>
+      <li>
+        <p>if() …else …</p>
+      </li>
+      <li>
+        <p>switch   表达式可以是整型 字符串表达式 或枚举   case为常量  case的穿透</p>
+
+        <ul>
+          <li>
+            <p>枚举</p>
+          </li>
+          <li>
+            <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>enum weekday
+{sun,mon,tue,wed} a;
+
+a = mon;
+switch (a){
+    case 0:
+    	printf("0\n");
+    	break;
+    case 1:
+    	printf("1\n");
+    	break;
+    case 2:
+    	printf("2\n");
+    	break;
+    case 3:
+    	printf("3\n");
+    	break;
+    default:
+    	printf("not 1 2 3\n");
+}
+</code></pre></div>            </div>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>循环</p>
+
+    <ul>
+      <li>
+        <p>for()…</p>
+
+        <ul>
+          <li>while()…</li>
+        </ul>
+      </li>
+      <li>
+        <p>do…while…</p>
+      </li>
+      <li>
+        <p>goto…</p>
+
+        <ul>
+          <li>
+            <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	int i =1;
+  	int sum =0;
+
+loop:
+	if(i &lt;= 100){
+
+        sum += i;
+		i++;
+		goto loop;
+
+	}
+
+printf("1+2+...+100=%d\n",sum);
+</code></pre></div>            </div>
+          </li>
+          <li>loop为标签出口</li>
+        </ul>
+      </li>
+      <li>
+        <p>引入<math.h>   编译时 gcc main.c -lm 主动引入</math.h></p>
+
+        <ul>
+          <li>pow(a,3);   表示a的三次方</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>辅助控制</p>
+
+    <ul>
+      <li>continue</li>
+      <li>break</li>
+      <li>return</li>
+    </ul>
+  </li>
+</ul>
+
+<p>*</p>
+
+:ET

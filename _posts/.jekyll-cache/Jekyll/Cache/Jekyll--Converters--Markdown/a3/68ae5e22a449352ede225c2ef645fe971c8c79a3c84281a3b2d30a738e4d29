@@ -1,0 +1,299 @@
+I"�!<p>简单打印实心和空心 正方形、三角形、菱形、梯形、回字</p>
+
+<h1 id="打印实心和空心-正方形三角形菱形梯形回字">打印实心和空心 正方形、三角形、菱形、梯形、回字</h1>
+
+<h2 id="封装函数">封装函数</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> function printTX(draw,content,row,col,hollow){
+      switch(draw)
+      {
+        case "zfx" :
+              ZFX(content,row,col,hollow);
+        break;
+        case "sjx" :
+              SJX(content,row,col,hollow)
+        break;
+        case "lx" :
+              LX(content,row,col,hollow)
+        break;
+        case "hui" :
+            HUI(content,row,col,hollow);
+        break;
+        case "tx" :
+            TX(content,row,col,hollow);
+        break;
+      }
+    }
+</code></pre></div></div>
+
+<h2 id="正方形">正方形</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function ZFX(content,row,col,hollow){
+      var tmp = "";
+      if(row!=col || row&lt;3){
+        console.log("行数不正确或小于3");
+        return;
+      }
+      if(!hollow){
+        console.log("打印正方形");
+        for(var i=0; i&lt;row; i++)
+        {
+            tmp="";
+            for(var j=0; j&lt;col; j++) 
+            {
+                tmp+=content;
+            }
+            console.log(tmp);
+        }
+      }else{
+        console.log("打印空心正方形");
+        for(var i=0; i&lt;row; i++)
+        {
+          tmp="";
+          if(i==0 || i==row-1){
+            for(var j=0; j&lt;col; j++) 
+            {
+                tmp+=content;
+                tmp+=" ";
+            }
+          }else{
+            tmp+=content;
+            tmp+=" ";
+            for(var j=0; j&lt;(row-2)*2; j++) 
+            {
+                tmp+=" "
+            }
+            tmp+=content;
+            tmp+=" ";
+          }
+            console.log(tmp);
+        }
+      }      
+    }
+    console.log('------------- 分隔符 --------------');
+</code></pre></div></div>
+
+<h2 id="三角形">三角形</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function SJX(content,row,col,hollow){
+        if(row!=col || row&lt;4){
+          console.log("输入行数错误或行数&lt;4或行列不等");
+          return;
+        }
+        var tmp ="";
+        if(!hollow){
+            console.log("打印三角形");
+            for(var i =0; i&lt;row; i++)
+            {
+              tmp = "";
+              for(var j=0; j&lt;=i; j++){
+                  tmp+=content;
+                  tmp+=" ";
+              }
+              console.log(tmp);
+            }
+        }else{
+            console.log("打印空心三角形");
+            for(var i=0; i&lt;row; i++)
+            {
+              tmp = "";
+            if(i==0 || i==1 || i==row-1){
+                for(var j=0; j&lt;=i; j++){
+                  tmp+=content;
+                  tmp+=" ";
+                }
+            }else{
+                  tmp+=content;
+                  tmp+=" ";
+              for(var j=0; j&lt;(i-1)*2; j++){
+                 tmp+=" ";
+              }
+                  tmp+=content;
+                  tmp+=" ";
+            }
+              console.log(tmp);
+           }
+        }
+        
+    }
+</code></pre></div></div>
+
+<h2 id="菱形">菱形</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function LX(content,row,col,hollow){
+        var temp ="";
+        var tmp;
+        var rowtmp=(row-1)/2
+        if(!hollow){
+          console.log("打印菱形");
+          for(var i=-rowtmp; i&lt;=rowtmp; i++){
+            temp="";
+            tmp = Math.abs(i);
+            for(var j = 0; j&lt;tmp;j++){
+              temp+=" ";
+            }
+            for(var k=0; k&lt;row-2*tmp; k++){
+              temp+=content;
+            }
+            console.log(temp);
+          }
+        }else{
+          console.log("打印空心菱形");
+          for(var i=-rowtmp; i&lt;=rowtmp; i++){
+            temp="";
+            tmp = Math.abs(i);
+            for(var j = 0; j&lt;tmp;j++){
+              temp+=" ";
+            }
+            if(tmp==rowtmp || tmp ==rowtmp-1){
+              for(var k=0; k&lt;rowtmp-tmp+1; k++){
+                temp+=content;
+                temp+=" ";
+              }
+            }else{
+                temp+=content;
+                temp+=" ";
+              for(var k=0; k&lt;row-2*tmp-3; k++){
+                temp+=" ";
+              }
+                temp+=content;
+                temp+=" ";
+            }
+            console.log(temp);
+          }
+        }
+      }
+</code></pre></div></div>
+
+<h2 id="回字">回字</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function HUI(content,row,col,hollow){
+        console.log("打印回");
+        var tmp ="";
+         for(var i =0; i&lt;row; i++)
+         {
+            tmp = "";
+            if(i==0 || i==row-1){
+              for(var j=0; j&lt;row; j++){
+                  tmp+=content;
+                  tmp+=" ";
+              }  
+            }else if(i==1 || i==row-2){
+                  tmp+=content;
+                  tmp+=" ";
+              for(var j=0; j&lt;(row-2)*2; j++){
+                  tmp+=" ";
+              }
+                  tmp+=content;
+                  tmp+=" ";
+            }else if(i==2 || i==row-3){
+                  tmp+=content;
+                  tmp+=" ";
+              for(var j=0; j&lt;2; j++){
+                tmp+=" ";
+              }
+              for(var k=0; k&lt;row-4; k++){
+                  tmp+=content;
+                  tmp+=" ";
+              }
+              for(var j=0; j&lt;2; j++){
+                tmp+=" ";
+              }
+                  tmp+=content;
+                  tmp+=" ";
+            }else{
+                  tmp+=content;
+                  tmp+=" "; 
+              for(var j=0; j&lt;2; j++){
+                tmp+=" ";
+              }
+                  tmp+=content;
+                  tmp+=" ";
+              for(var k=0; k&lt;(row-6)*2; k++){
+                tmp+=" "
+              }
+                  tmp+=content;
+                  tmp+=" ";
+              for(var j=0; j&lt;2; j++){
+                tmp+=" ";
+              }
+                  tmp+=content;
+                  tmp+=" ";
+            }
+            console.log(tmp);
+         }
+    }
+</code></pre></div></div>
+
+<h2 id="梯形">梯形</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> function TX(content,row,col,hollow){
+        if(row&lt;3){
+          console.log("请输入行数小于3");
+          return ;
+        }
+        var tmp = "";
+        if(!hollow){
+          console.log("打印梯形");
+          for(var i=0;i&lt;row;i++){
+             tmp = "";
+             for( var j =0; j&lt;row-1-i; j++){
+                tmp+=" ";
+             }
+             for( var k =0; k&lt;2*i+4; k++){
+                tmp+=content;
+             }
+             console.log(tmp);
+          }
+        }else{
+          console.log("打印空心梯形");
+          for(var i=0;i&lt;row;i++){
+            tmp = "";
+            for( var j =0; j&lt;row-1-i; j++){
+                tmp+=" ";
+            }
+            if(i==0 || i==row-1){
+              for( var k =0; k&lt;2*i+4; k++){
+                tmp+=content;
+              }
+            }else{
+              tmp+=content;
+              for( var k =0; k&lt;2*i+2; k++){
+                 tmp+=" ";
+              }
+              tmp+=content;
+            }
+            console.log(tmp);
+          }
+        }
+      }
+
+</code></pre></div></div>
+
+<h2 id="打印">打印</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>printTX("zfx","#",4,4,false);
+    console.log('------------- 分隔符 --------------');
+    printTX("zfx","#",4,4,true);
+    console.log('------------- 分隔符 --------------');
+
+    printTX("sjx","*",8,8,false);
+    console.log('------------- 分隔符 --------------');
+    printTX("sjx","*",8,8,true);
+    console.log('------------- 分隔符 --------------');
+
+    printTX("lx","#",9,9,false);
+    console.log('------------- 分隔符 --------------');
+    printTX("lx","#",9,9,true);
+    console.log('------------- 分隔符 --------------');
+
+    printTX("hui","x",12,12,false);
+    console.log('------------- 分隔符 --------------');
+
+    printTX("tx","#",3,3,false);
+    console.log('------------- 分隔符 --------------');
+    printTX("tx","#",3,3,true);
+    console.log('------------- 分隔符 --------------');
+</code></pre></div></div>
+
+:ET

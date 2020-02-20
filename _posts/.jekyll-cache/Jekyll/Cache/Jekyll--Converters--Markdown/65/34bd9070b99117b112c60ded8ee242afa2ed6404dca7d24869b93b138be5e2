@@ -1,0 +1,23 @@
+I"<p>基本分支提交 合并</p>
+
+<h2 id="分支合并提交操作">分支合并提交操作</h2>
+
+<ul>
+  <li>创建进入分支git checkout -b xxx</li>
+  <li>push分支git push origin cyz</li>
+  <li>主分支上有提交任务git push</li>
+  <li>更新git pull</li>
+  <li>切换到分支git checkout  xxx</li>
+  <li>分支添加 git add .</li>
+  <li>分支提交git commit -m “”</li>
+  <li>分支    git push origin xxx</li>
+  <li>切换主分支  git checkout master</li>
+  <li>更新  git pull</li>
+  <li>查看所有分支 git branch –all</li>
+  <li>主分支上合并 git merge remotes/origin/xxx</li>
+  <li>提交主分支 git push</li>
+  <li>回退版本 git reset –hard 81aa32e04159253919c0f34180b657b41f55ecc7</li>
+  <li>刷新仓库 git push origin HEAD –force</li>
+</ul>
+
+:ET
