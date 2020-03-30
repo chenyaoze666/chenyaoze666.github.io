@@ -10,6 +10,7 @@
 # mockjs及Hook的使用
 
 * article.js
+* <http://mockjs.com/examples.html#Random.cparagraph(%20min?,%20max?%20)>
 
 ```
 import Mock from "mockjs";
@@ -159,7 +160,7 @@ Mock.mock(/\/api\/article/,'get',{
 ```
 
 * ArticleComments.js
-* 是哦也能够hook改造
+* 使用hook改造class组件
 
 ```
 import React, { Fragment, useState, useEffect } from 'react';
