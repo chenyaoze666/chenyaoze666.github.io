@@ -193,13 +193,6 @@ public class HelloServlet extends HttpServlet {
 * 新建jsp页面
 
 ```jsp
-<%--
-  Created by IntelliJ IDEA.
-  User: Administrator
-  Date: 2020/5/21 0021
-  Time: 8:47
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -246,13 +239,6 @@ ${msg}
 * 新建表单页面
 
 ```jsp
-<%--
-  Created by IntelliJ IDEA.
-  User: Administrator
-  Date: 2020/5/21 0021
-  Time: 8:53
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -274,7 +260,7 @@ ${msg}
 
 ## MVC框架需要做哪些事情
 
-1.  将url映射到java类或Java类的犯法
+1.  将url映射到java类或Java类的方法
 2. 封装用户提交的数据
 3. 处理请求---调用相关的业务处理---封装响应数据
 4. 将响应的数据进行渲染.jsp/html等表示层数据
@@ -397,13 +383,6 @@ public class HelloController implements Controller {
 * hello.jsp
 
 ```jsp
-<%--
-  Created by IntelliJ IDEA.
-  User: Administrator
-  Date: 2020/5/21 0021
-  Time: 9:50
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -545,13 +524,6 @@ DispatcherServlet----->相应
 * hello.jsp
 
 ```jsp
-<%--
-  Created by IntelliJ IDEA.
-  User: Administrator
-  Date: 2020/5/21 0021
-  Time: 11:08
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -574,12 +546,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-/**
- * com.cyz.controller
- *
- * @author cyz
- * @create 2020/05/21 11-08
- */
 @Controller
 @RequestMapping("/hello")
 public class HelloController {
@@ -684,13 +650,6 @@ public class ControllerDemo implements Controller {
 * 写jsp
 
 ```jsp
-<%--
-  Created by IntelliJ IDEA.
-  User: Administrator
-  Date: 2020/5/21 0021
-  Time: 13:23
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -748,7 +707,7 @@ ${msg}
 
 * 配置springmvc-servlet.xml
 
-```
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -1070,7 +1029,7 @@ public class UserController {
     public String test1(String name, Model model) {
         //接收前端参数
         System.out.println("接收到的参数为: " + name);
-        //将返回的结果床底给前端
+        //将返回的结果传递给前端
         model.addAttribute("msg", name);
 //                视图跳转
         return "test";
@@ -1093,7 +1052,7 @@ public class UserController {
     public String test1(@RequestParam("username") String name, Model model) {
         //接收前端参数
         System.out.println("接收到的参数为: " + name);
-        //将返回的结果床底给前端
+        //将返回的结果传递给前端
         model.addAttribute("msg", name);
 //                视图跳转
         return "test";
@@ -1173,12 +1132,6 @@ import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.Map;
 
-/**
- * com.cyz.controller
- *
- * @author cyz
- * @create 2020/05/21 15-39
- */
 public class GenericEncodingFilter implements Filter {
 
 
@@ -2038,7 +1991,7 @@ public interface BookService {
 
 ### 新建Service实现类
 
-```
+```java
 package com.cyz.service;
 
 import com.cyz.dao.BookMapper;
@@ -2247,7 +2200,7 @@ public class BookServiceImpl implements BookService {
 </beans>
 ```
 
-## idea没有自动配置需要关联包
+## idea没有自动配置的需要关联包
 
 * applicationContext.xml
 
@@ -2309,13 +2262,6 @@ public class BookController {
 
 ```jsp
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%--
-  Created by IntelliJ IDEA.
-  User: Administrator
-  Date: 2020/5/10 0021
-  Time: 21:06
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -2390,13 +2336,6 @@ public class BookController {
 ## 编写index.jsp
 
 ```jsp
-<%--
-  Created by IntelliJ IDEA.
-  User: Administrator
-  Date: 2020/5/10 0021
-  Time: 20:47
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -2461,13 +2400,6 @@ lib配置
 * addBook.jsp
 
 ```jsp
-<%--
-  Created by IntelliJ IDEA.
-  User: Administrator
-  Date: 2020/5/11 0022
-  Time: 9:08
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -2551,7 +2483,6 @@ public class BookController {
     //添加书籍的请求
     @RequestMapping("/addBook")
     public String addBook(Books books){
-        System.out.println(books);
         bookService.addBook(books);
         return "redirect:/book/allBook";
     }
@@ -2564,13 +2495,6 @@ public class BookController {
 * updateBook
 
 ```jsp
-<%--
-  Created by IntelliJ IDEA.
-  User: Administrator
-  Date: 2020/5/11 0022
-  Time: 9:31
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -2621,7 +2545,6 @@ public class BookController {
     @RequestMapping("/toUpdateBook")
     public String toUpdatePaper(int id, Model model){
         Books books = bookService.queryBookById(id);
-        System.out.println("toUpdatePaper==="+books);
         model.addAttribute("QBook",books);
         return "updateBook";
     }
@@ -2629,7 +2552,6 @@ public class BookController {
     //修改书籍的请求
     @RequestMapping("/updateBook")
     public String updateBook(Books books){
-        System.out.println("updateBook==="+books);
         bookService.updateBook(books);
         return "redirect:/book/allBook";
     }
@@ -2826,7 +2748,6 @@ public class TsetController {
         return "hello";
     }
 }
-
 ```
 
 * 执行顺序
@@ -2909,13 +2830,6 @@ public class LoginController {
 * login.jsp
 
 ```jsp
-<%--
-  Created by IntelliJ IDEA.
-  User: Administrator
-  Date: 2020/5/11 0022
-  Time: 13:56
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -2938,13 +2852,6 @@ public class LoginController {
 * main.jsp
 
 ```jsp
-<%--
-  Created by IntelliJ IDEA.
-  User: Administrator
-  Date: 2020/5/11 0022
-  Time: 13:56
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
