@@ -115,7 +115,7 @@
 
   * 创建main 
 
-  * ```
+  * ```c
     	int main()                 注意不是void
     {
     	printf("hello world!\n");      printf  <stdio.h>提供
@@ -138,7 +138,7 @@
 
 * 创建`vim hello.c`
 
-  * ```
+  * ```c
     #include <stdio.h>
     
     int max (int a, int b)
@@ -217,7 +217,7 @@
 
   * 并修改
 
-    ```
+    ```c
     int mix (int a, int b)
     {
         if(a<b){
@@ -234,7 +234,7 @@
 
 * 修改hello.c
 
-  * ```
+  * ```c
     #include <stdio.h>
     //#include "max.c"
     
@@ -259,7 +259,7 @@
 
   * 创建max.h
 
-  * ```
+  * ```c
     int max(int a, int b);
     ```
 
@@ -271,7 +271,7 @@
 
 * 修改hello.c
 
-  * ```
+  * ```c
     #include <stdio.h>
     #include "max.h"
     #include "min.h"
@@ -299,7 +299,7 @@
 
 * `vim Makefile`       约定相同的文件  (Tab 6个空格)    4个空格不识别  只能以Tab开头
 
-  * ```
+  * ```c
     # this is make file
     hello.out:max.o min.o hello.c 
     	gcc max.o min.o hello.c -o hello.out
@@ -318,7 +318,7 @@
 
 * 创建main.c文件
 
-* ```
+* ```c
   #include <stdio.h>
   
   int main(int argv, char* argc[])
@@ -344,7 +344,7 @@
 
   * 修改main.c
 
-  * ```
+  * ```c
     #include <stdio.h>
     
     int main(int argv, char* argc[])
@@ -372,7 +372,7 @@
 
 * 创建main2.c
 
-* ```
+* ```c
   #include <stdio.h>
   
   int main(int argv, char* argc[])
@@ -398,7 +398,7 @@
 
 * 创建main3.c
 
-* ```
+* ```c
   #include <stdio.h>
   
   int main(int argv, char* argc[])
@@ -420,7 +420,7 @@
 
   * 输出
 
-    ```
+    ```c
     argv is 5
     argc[0] is ./m3.out
     argc[1] is -l
@@ -433,7 +433,7 @@
 
 * 创建文件 cio.c
 
-  * ```
+  * ```c
     #include <stdio.h>
     /*
     	指针
@@ -485,7 +485,7 @@
 
   * 改造文件cio.c
 
-  * ```
+  * ```c
     #include <stdio.h>
     
     int main()
@@ -507,7 +507,7 @@
 
 * 创建文件 main.c
 
-  * ```
+  * ```c
     #include <stdio.h>
     
     int main()
@@ -540,7 +540,7 @@
 
 * 创建文件`input.txt`
 
-  * ```
+  * ```c
     5
     9
     ```
@@ -549,7 +549,7 @@
 
 * 输出
 
-  * ```
+  * ```c
     input the int value i:
     input the int value j:
     i+j=14
@@ -557,7 +557,7 @@
 
 * 改造`main.c`
 
-* ```
+* ```c
   #include <stdio.h>
   
   int main()
@@ -607,7 +607,7 @@
 
 * 创建`avg.c`
 
-* ```
+* ```c
   #include <stdio.h>
   
   int main()
@@ -626,7 +626,7 @@
 
 * 创建`input.c`
 
-* ```
+* ```c
   #include <stdio.h>
   
   int main()
@@ -666,7 +666,7 @@
 
 * 创建`main.c`
 
-* ```
+* ```c
   #include <stdio.h>
   
   void change(int a,int b)
@@ -695,7 +695,7 @@
 
 * 改造`mian.c`    引入指针
 
-* ```
+* ```c
   #include <stdio.h>
   
   void change(int *a,int *b)
@@ -738,7 +738,7 @@
 
 * `cp main.c main2,c`
 
-* ```
+* ```c
   #include <stdio.h>
   
   void change(int a,int b)
@@ -821,7 +821,7 @@
 
   * 创建`main.c`
 
-  * ```
+  * ```c
     #include <stdio.h>
     int global=0;
     
@@ -916,7 +916,7 @@
 ## 函数指针
 * 修改main.c
 
-  ```
+  ```c
   #include <stdio.h>
   int global=0;
   
@@ -960,7 +960,7 @@
 
 * 创建`main.c`
 
-* ```
+* ```c
   #include <stdio.h>
   
   int main()
@@ -991,7 +991,7 @@
 
 * 编译运行
 
-* ```
+* ```c
   *p=3
   *p=1
   *p=2
@@ -1027,7 +1027,7 @@
 
 * 修改
 
-* ```
+* ```c
   #include <stdio.h>
   
   int main()
@@ -1061,7 +1061,7 @@
 
 * 编译输出调试
 
-* ```
+* ```c
   *p=3
   *p=1
   *p=2
@@ -1083,7 +1083,7 @@
 
 * 改造
 
-* ```
+* ```c
   #include <stdio.h>
   
   int main()
@@ -1117,7 +1117,7 @@
 
 * 创建`main.c`
 
-* ```
+* ```c
   #include <stdio.h>
   
   int main()
@@ -1143,7 +1143,7 @@
 
 * 改造
 
-* ```
+* ```c
   #include <stdio.h>
   
   int main()
@@ -1163,7 +1163,7 @@
 
 * 改造
 
-* ```
+* ```c
   #include <stdio.h>
   
   int main()
@@ -1195,7 +1195,7 @@
 
   * 修改main.c
 
-  * ```
+  * ```c
     #include <stdio.h>
     
     int main()
@@ -1216,7 +1216,7 @@
 
   * 修改main.c
 
-  * ```
+  * ```c
     #include <stdio.h>
     
     int main()
@@ -1237,7 +1237,7 @@
 
   * 修改main.c
 
-  * ```
+  * ```c
     #include <stdio.h>
     
     int main()

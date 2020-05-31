@@ -11,7 +11,7 @@
 
 * index.js
 
-```
+```react
 import React from 'react';
 import {render} from 'react-dom';
 
@@ -24,7 +24,7 @@ render(<App/>,document.getElementById("root"));
 
 * App.js
 
-```
+```react
 import React from 'react';
 import {HashRouter,Switch,Route} from "react-router-dom";
 
@@ -112,7 +112,7 @@ export default App;
 
 * routes.js
 
-```
+```react
 import Home from "../components/home/home";
     import Login from "../components/login/login";
 import PhoneRegister from "../components/phoneRegister/phoneRegister";
@@ -163,7 +163,7 @@ export default routers;
 * conponents
 * home.js
 
-```
+```react
 import React,{Fragment} from 'react';
 import {HashRouter,Switch,Route} from "react-router-dom";
 
@@ -207,7 +207,7 @@ export default Home;
 
 * loginTop.js
 
-```
+```react
 import React, { Fragment } from 'react';
 
 import "../../../assets/css/registerTop.css";
@@ -244,7 +244,7 @@ export default LoginTop;
 
 * login.js
 
-```
+```react
 import React, { Fragment } from 'react';
 import LoginTop from './loginTop/loginTop';
 import {Link} from "react-router-dom";
@@ -317,7 +317,7 @@ class Login extends React.Component{
 
 
     getLoginApi=(value)=>{
-        axios.post("http://jizhang-api-dev.it266.com/api/user/token/mobile",qs.stringify({
+        axios.post("http://xxx/api/user/token/mobile",qs.stringify({
           mobile:this.state.mobile,
           password:this.state.password,
         }))
@@ -338,7 +338,7 @@ class Login extends React.Component{
 
     //获取信息
     getUserInfo=(value)=>{
-        axios.get("http://jizhang-api-dev.it266.com/api/user/profile",{
+        axios.get("http://xxx/api/user/profile",{
             params:{
                 token:window.localStorage.getItem("token"),
             }
@@ -425,7 +425,7 @@ export default Login;
 
 * infoform.js
 
-```
+```react
 import React, { Fragment } from 'react';
 import InfoTop from '../infotop/infotop';
 
@@ -519,7 +519,7 @@ export default InfoForm;
 
 * infoTop.js
 
-```
+```react
 import React, { Fragment } from 'react';
 
 
@@ -563,7 +563,7 @@ export default InfoTop;
 
 * myinfo.js
 
-```
+```react
 import React,{Fragment} from 'react';
 
 import {Switch,Route} from 'react-router-dom';
@@ -609,7 +609,7 @@ export default MyInfo;
 
 * phoneRegister.js
 
-```
+```react
 import React,{Fragment} from 'react';
 import {Switch,Route} from "react-router-dom";
 
@@ -654,7 +654,7 @@ export default PhoneRegister;
 
 * top.js
 
-```
+```react
 import React, { Fragment } from 'react';
 
 
@@ -694,7 +694,7 @@ export default Top;
 
 * form.js
 
-```
+```react
 import React, { Fragment } from 'react';
 import axios from 'axios';
 import qs from 'qs';
@@ -899,7 +899,7 @@ class Form extends React.Component{
 
     //获取信息
     getUserInfo=(value)=>{
-        axios.get("http://jizhang-api-dev.it266.com/api/user/profile",{
+        axios.get("http://xxx/api/user/profile",{
             params:{
                 token:window.localStorage.getItem("token"),
             }
@@ -922,7 +922,7 @@ class Form extends React.Component{
 
     //用户注册
     userRegister=(value)=>{
-        axios.post("http://jizhang-api-dev.it266.com/api/user/register",qs.stringify({
+        axios.post("http://xxx/api/user/register",qs.stringify({
             mobile:this.state.registerMobile,
             verify:this.state.verify,
             password:this.state.password,
@@ -1061,7 +1061,7 @@ export default Form;
 
 * TestVerify.js
 
-```
+```react
 import React from 'react';
 import axios from 'axios';
 import qs from 'qs';
@@ -1120,7 +1120,7 @@ class TestVerify extends React.Component{
             })
             return;
         }
-        axios.post("http://jizhang-api-dev.it266.com/api/sms/verify",qs.stringify({
+        axios.post("http://xxx/api/sms/verify",qs.stringify({
             mobile:this.props.registerMobile,
             captcha_key:this.state.captcha_key,
             captcha_code:this.state.captcha_code,

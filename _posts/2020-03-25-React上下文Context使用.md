@@ -9,7 +9,7 @@
 
 * App.js
 
-```
+```react
 import React from 'react';
 
 import {HashRouter,Switch,Route} from 'react-router-dom';
@@ -88,7 +88,7 @@ export default App;
 
 * home.js
 
-```
+```react
 import React, { Fragment } from 'react';
 
 import "../../assets/css/home.css";
@@ -126,7 +126,7 @@ export default Home;
 
 * nav.js
 
-```
+```react
 import React, { Fragment } from 'react';
 import {Link} from "react-router-dom";
 
@@ -171,7 +171,7 @@ export default Nav;
 
 * login.js
 
-```
+```react
 import React, { Fragment } from 'react';
 import {Link} from "react-router-dom";
 import axios from 'axios';
@@ -186,7 +186,7 @@ class Login extends React.Component{
         super(props);
         console.log(this.props)
         this.state={
-            axiosUrl:"http://playground.it266.com/login",
+            axiosUrl:"http://xxx/login",
             routerHistory:"/",
             messages:"",
             username:'',

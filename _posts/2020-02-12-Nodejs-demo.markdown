@@ -1,17 +1,17 @@
----                                                                         
+---
    layout: post
    title:  "Nodejs"                                                           
    date: 2020-02-12 08:41:00
    categories: Node.js Javescript
 ---
-  
+
   简单打印实心和空心 正方形、三角形、菱形、梯形、回字
 
 # 打印实心和空心 正方形、三角形、菱形、梯形、回字
 
 ## 封装函数
 
-```
+```js
  function printTX(draw,content,row,col,hollow){
       switch(draw)
       {
@@ -36,7 +36,7 @@
 
 ## 正方形
 
-```
+```js
 function ZFX(content,row,col,hollow){
       var tmp = "";
       if(row!=col || row<3){
@@ -84,7 +84,7 @@ function ZFX(content,row,col,hollow){
 
 ## 三角形
 
-```
+```js
 function SJX(content,row,col,hollow){
         if(row!=col || row<4){
           console.log("输入行数错误或行数<4或行列不等");
@@ -130,7 +130,7 @@ function SJX(content,row,col,hollow){
 
 ## 菱形
 
-```
+```js
 function LX(content,row,col,hollow){
         var temp ="";
         var tmp;
@@ -178,7 +178,7 @@ function LX(content,row,col,hollow){
 
 ## 回字
 
-```
+```js
 function HUI(content,row,col,hollow){
         console.log("打印回");
         var tmp ="";
@@ -239,7 +239,7 @@ function HUI(content,row,col,hollow){
 
 ## 梯形
 
-```
+```js
  function TX(content,row,col,hollow){
         if(row<3){
           console.log("请输入行数小于3");
@@ -285,7 +285,7 @@ function HUI(content,row,col,hollow){
 
 ## 打印
 
-```
+```js
 printTX("zfx","#",4,4,false);
     console.log('------------- 分隔符 --------------');
     printTX("zfx","#",4,4,true);
