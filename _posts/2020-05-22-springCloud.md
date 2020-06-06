@@ -2,9 +2,9 @@
    layout: post
    title: "SpringCloud"                                                        
    date: 2020-05-22 09:00:00 +0530
-   categories: JAVA SpringCloud Eureka Ribbon Feign Hystrix Zuul
+   categories: JAVA SpringCloud Eureka Ribbon Feign Hystrix Zuul Config
 ---
-  JAVA SpringCloud Eureka Ribbon Feign Hystrix Zuul
+  JAVA SpringCloud Eureka Ribbon Feign Hystrix Zuul Config
 
 
 # SpringCloud
