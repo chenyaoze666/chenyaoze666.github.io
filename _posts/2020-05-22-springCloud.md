@@ -142,7 +142,7 @@
    1. 成熟的互联网架构: 应用服务化拆分 + 消息中间件
    2. 网站架构图
 
-   ![网站架构图](G:\Soft\Git\chenyaoze666.github.io\assets\image\网站架构图.png)
+   ![网站架构图](https://chenyaoze666.github.io/assets/image/网站架构图.png)
 
 2. Dubbo和SpringCloud对比
 
