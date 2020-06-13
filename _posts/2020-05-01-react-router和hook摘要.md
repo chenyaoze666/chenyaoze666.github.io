@@ -1,13 +1,13 @@
 ---
    layout: post
-   title: "react-router和Hock摘要"                                                        
+   title: "react-router和Hook摘要"                                                        
    date: 2020-05-01 10:00:00 +0530
    categories: React
 ---
   React
 
 
-# react-router和Hock摘要
+# react-router和Hook摘要
 
 ## 路由动态传值和参数获取
 
@@ -27,7 +27,7 @@ this.props.history.push('/hone')
 <Redirect to="/home"/>
 ```
 
-## Hock
+## Hook
 
 ```
 import {useState,useEffect} from 'react'
